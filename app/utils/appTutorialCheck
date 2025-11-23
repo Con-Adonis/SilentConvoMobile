@@ -1,0 +1,25 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const seenTutorial = 'seenTutorial';
+
+export const StorageService = {
+  // Returns true if tutorial has been seen
+  checkTutorialStatus: async (): Promise<boolean> => {
+    try {
+      const value = await AsyncStorage.getItem(seenTutorial);
+      return value === 'true';
+    } catch (e) {
+      console.warn('Storage Read Error', e);
+      return false;
+    }
+  },
+
+  // Marks tutorial as complete
+  markTutorialComplete: async (): Promise<void> => {
+    try {
+      await AsyncStorage.setItem(seenTutorial, 'true');
+    } catch (e) {
+      console.warn('Storage Write Error', e);
+    }
+  }
+};
