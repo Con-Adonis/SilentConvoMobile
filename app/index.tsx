@@ -1,15 +1,14 @@
+import { GlobalStyles } from "@/constants/theme";
 import { Text, View } from "react-native";
 
-export default function Index() {
+export default function Home() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>First page</Text>
+    <View style={GlobalStyles.container}>
+      <Text style={GlobalStyles.title}>Welcome to MyApp</Text>
+      <Text style={{color:'red'}}>Bruh</Text>
+      <Text style={GlobalStyles.subtitle}>
+        This is a sample application using React Native and Expo Router.
+      </Text>
     </View>
   );
 }
