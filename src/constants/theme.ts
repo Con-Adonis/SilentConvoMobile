@@ -1,10 +1,8 @@
-
 export const colors = {
-    background: '#09090b', // Zinc-950 (Dark mode bg)
-    surface: '#18181b',    // Zinc-900 (Card bg)
-    primary: 'green',    // Zinc-50 (Text/Icon)
-    secondary: '#a1a1aa',  // Zinc-400 (Subtext)
-    accent: '#2563eb',     // Blue-600 (Action)
+    background: '#050b1d', // dark blue
+    primary: '#bfc9d5', // light gray
+    bold: '#60a5fa', // light blue
+    accent: '#1e283b', // gray
 };
 
 export const GlobalStyles = {
@@ -22,9 +20,21 @@ export const GlobalStyles = {
         letterSpacing: -0.5, // Tighter tracking = Modern look
         marginBottom: 8,
     },
+    titleBold: {
+        fontSize: 32,
+        fontWeight: '700' as const,
+        color: colors.bold,
+        letterSpacing: -0.4,
+        marginBottom: 8,
+    },
     subtitle: {
         fontSize: 16,
-        color: colors.secondary,
+        color: colors.primary,
+        lineHeight: 24,
+    },
+    subtitleBold: {
+        fontSize: 16,
+        color: colors.bold,
         lineHeight: 24,
     },
     background: {
