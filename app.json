@@ -34,6 +34,7 @@
           "imageWidth": 100,
           "resizeMode": "contain",
           "backgroundColor": "#050b1d"
+          //TODO: Figure out why splash screen changes not showing up on app launch
         }
       ],
       "expo-font"

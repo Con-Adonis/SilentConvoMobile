@@ -9,10 +9,11 @@ export const GlobalStyles = {
     container: {
         flex: 1,
         backgroundColor: colors.background,
+        flexDirection: "column" as const,
         alignItems: "center" as const,
-        justifyContent: "center" as const,
-        padding: 24,
+        padding: 24
     },
+
     title: {
         fontSize: 32,
         fontWeight: '500' as const,
